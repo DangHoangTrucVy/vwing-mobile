@@ -14,11 +14,15 @@ export default function TabsLayout() {
         tabBarActiveTintColor: "#059669",
         tabBarInactiveTintColor: "#64748B",
         tabBarStyle: {
-          height: 58 + insets.bottom,
-          paddingTop: 7,
-          paddingBottom: Math.max(insets.bottom, 8),
-          borderTopColor: "#E2E8F0",
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: 72,
           backgroundColor: "#FFFFFF",
+          borderTopWidth: 1,
+          borderTopColor: "#E5E7EB",
+          elevation: 8,
         },
         tabBarLabelStyle: {
           fontSize: 10,
@@ -29,12 +33,7 @@ export default function TabsLayout() {
         const { state, descriptors, navigation } = props;
 
         return (
-          <View
-            style={[
-              styles.tabBar,
-              { paddingBottom: Math.max(insets.bottom, 8) },
-            ]}
-          >
+          <View style={styles.tabBar}>
             {state.routes.map((route, index) => {
               if (route.name === "solution") return null;
 
@@ -115,19 +114,23 @@ export default function TabsLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#FFFFFF",
-    borderTopWidth: 1,
-    borderTopColor: "#E2E8F0",
-    paddingTop: 7,
-  },
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: "#FFFFFF",
+  borderTopWidth: 1,
+  borderTopColor: "#E2E8F0",
+  paddingTop: 7,
+  paddingBottom: 8,
+  minHeight: 64,
+},
+
   tab: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     gap: 3,
   },
+
   label: {
     fontSize: 10,
     fontWeight: "700",

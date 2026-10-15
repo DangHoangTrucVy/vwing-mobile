@@ -61,9 +61,9 @@ const styles = StyleSheet.create({
   content: {
     flexGrow: 1,
     width: "100%",
-    paddingHorizontal: 12,
-    paddingTop: 10,
-    paddingBottom: 24,
+    paddingHorizontal: 0,
+    paddingTop: 0,
+    paddingBottom: 0,
   },
 
   inner: {

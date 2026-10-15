@@ -1,4 +1,3 @@
-
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -25,17 +24,14 @@ export default function LoginScreen() {
 
   const handleLogin = () => {
     if (!email.trim() || !password) {
-      Alert.alert(
-        "Thiếu thông tin",
-        "Vui lòng nhập email và mật khẩu."
-      );
+      Alert.alert("Thiếu thông tin", "Vui lòng nhập email và mật khẩu.");
       return;
     }
 
     // TODO: Kết nối API đăng nhập của backend VWing.
     Alert.alert(
       "VWing",
-      "Giao diện đã sẵn sàng. Cần tích hợp API để đăng nhập."
+      "Giao diện đã sẵn sàng. Cần tích hợp API để đăng nhập.",
     );
   };
 
@@ -57,21 +53,12 @@ export default function LoginScreen() {
               onPress={() => router.back()}
               accessibilityLabel="Quay lại"
             >
-              <Ionicons
-                name="arrow-back"
-                size={22}
-                color="#064E3B"
-              />
+              <Ionicons name="arrow-back" size={22} color="#064E3B" />
             </Pressable>
 
             <View style={styles.brand}>
               <View style={styles.logo}>
-                <Svg
-                  width={25}
-                  height={25}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
+                <Svg width={25} height={25} viewBox="0 0 24 24" fill="none">
                   <Path
                     d="M12 21V10"
                     stroke="#047857"
@@ -106,26 +93,18 @@ export default function LoginScreen() {
           {/* Intro */}
           <View style={styles.intro}>
             <View style={styles.welcomeBadge}>
-              <Ionicons
-                name="leaf-outline"
-                size={15}
-                color="#047857"
-              />
-              <Text style={styles.welcomeText}>
-                Nền tảng nông nghiệp số
-              </Text>
+              <Ionicons name="leaf-outline" size={15} color="#047857" />
+              <Text style={styles.welcomeText}>Nền tảng nông nghiệp số</Text>
             </View>
 
             <Text style={styles.title}>
               Chào mừng trở lại!
-              <Text style={styles.titleHighlight}>
-                
-              </Text>
+              <Text style={styles.titleHighlight}></Text>
             </Text>
 
             <Text style={styles.subtitle}>
-              Đăng nhập để tiếp tục quản lý vùng trồng
-              và khám phá hệ sinh thái nông nghiệp thông minh.
+              Đăng nhập để tiếp tục quản lý vùng trồng và khám phá hệ sinh thái
+              nông nghiệp thông minh.
             </Text>
           </View>
 
@@ -134,11 +113,7 @@ export default function LoginScreen() {
             <Text style={styles.label}>Email</Text>
 
             <View style={styles.inputContainer}>
-              <Ionicons
-                name="mail-outline"
-                size={20}
-                color="#64748B"
-              />
+              <Ionicons name="mail-outline" size={20} color="#64748B" />
 
               <TextInput
                 style={styles.input}
@@ -161,22 +136,16 @@ export default function LoginScreen() {
                 onPress={() =>
                   Alert.alert(
                     "Quên mật khẩu",
-                    "Chức năng đặt lại mật khẩu sẽ được tích hợp sau."
+                    "Chức năng đặt lại mật khẩu sẽ được tích hợp sau.",
                   )
                 }
               >
-                <Text style={styles.forgotText}>
-                  Quên mật khẩu?
-                </Text>
+                <Text style={styles.forgotText}>Quên mật khẩu?</Text>
               </Pressable>
             </View>
 
             <View style={styles.inputContainer}>
-              <Ionicons
-                name="lock-closed-outline"
-                size={20}
-                color="#64748B"
-              />
+              <Ionicons name="lock-closed-outline" size={20} color="#64748B" />
 
               <TextInput
                 style={styles.input}
@@ -192,20 +161,14 @@ export default function LoginScreen() {
               />
 
               <Pressable
-                onPress={() =>
-                  setShowPassword((previous) => !previous)
-                }
+                onPress={() => setShowPassword((previous) => !previous)}
                 accessibilityLabel={
                   showPassword ? "Ẩn mật khẩu" : "Hiện mật khẩu"
                 }
                 hitSlop={10}
               >
                 <Ionicons
-                  name={
-                    showPassword
-                      ? "eye-off-outline"
-                      : "eye-outline"
-                  }
+                  name={showPassword ? "eye-off-outline" : "eye-outline"}
                   size={21}
                   color="#64748B"
                 />
@@ -219,15 +182,9 @@ export default function LoginScreen() {
               ]}
               onPress={handleLogin}
             >
-              <Text style={styles.loginButtonText}>
-                Đăng nhập
-              </Text>
+              <Text style={styles.loginButtonText}>Đăng nhập</Text>
 
-              <Ionicons
-                name="arrow-forward"
-                size={19}
-                color="#FFFFFF"
-              />
+              <Ionicons name="arrow-forward" size={19} color="#FFFFFF" />
             </Pressable>
 
             <View style={styles.securityNote}>
@@ -268,11 +225,22 @@ const styles = StyleSheet.create({
 
   safeArea: {
     flex: 1,
-    backgroundColor: "#ffffff",
+    width: "100%",
+    minWidth: 0,
+    alignSelf: "stretch",
+    backgroundColor: "#FFFFFF",
   },
+
+  // scrollContent: {
+  //   flexGrow: 1,
+  //   paddingHorizontal: 24,
+  //   paddingTop: 10,
+  //   paddingBottom: 24,
+  // },
 
   scrollContent: {
     flexGrow: 1,
+    width: "100%",
     paddingHorizontal: 24,
     paddingTop: 10,
     paddingBottom: 24,
