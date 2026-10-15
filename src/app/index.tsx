@@ -450,6 +450,9 @@ export default function LandingScreen() {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    width: "100%",
+    minWidth: 0,
+    alignSelf: "stretch",
     backgroundColor: "#14532D",
   },
   image: {
@@ -460,13 +463,16 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(5, 30, 19, 0.36)",
     borderRadius: 28,
   },
- container: {
-  flex: 1,
-  paddingHorizontal: 22,
-  paddingTop: 12,
-  paddingBottom: 16,
-  justifyContent: "space-between",
-},
+  container: {
+    flex: 1,
+    width: "100%",
+    minWidth: 0,
+    alignSelf: "stretch",
+    paddingHorizontal: 22,
+    paddingTop: 12,
+    paddingBottom: 16,
+    justifyContent: "space-between",
+  },
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -503,12 +509,12 @@ const styles = StyleSheet.create({
   },
 
   content: {
-  flex: 1,
-  justifyContent: "center",
-  paddingHorizontal: 0,
-  marginTop: 0,
-  marginBottom: 0,
-},
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 0,
+    marginTop: 0,
+    marginBottom: 0,
+  },
 
   eyebrow: {
     color: "#D1FAE5",
@@ -562,19 +568,19 @@ const styles = StyleSheet.create({
     marginTop: 38,
   },
 
- glassCard: {
-  backgroundColor: "rgba(22, 101, 52, 0.45)",
-  borderWidth: 1,
-  borderColor: "rgba(255, 255, 255, 0.35)",
-  borderRadius: 20,
-  paddingVertical: 20,
-  paddingHorizontal: 16,
-  shadowColor: "#000",
-  shadowOffset: { width: 0, height: 8 },
-  shadowOpacity: 0.18,
-  shadowRadius: 16,
-  elevation: 8,
-},
+  glassCard: {
+    backgroundColor: "rgba(22, 101, 52, 0.45)",
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.35)",
+    borderRadius: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.18,
+    shadowRadius: 16,
+    elevation: 8,
+  },
   ctaText: {
     color: "#065F46",
     fontSize: 12,
@@ -605,20 +611,26 @@ const styles = StyleSheet.create({
 
   root: {
     flex: 1,
+    width: "100%",
+    minWidth: 0,
+    alignSelf: "stretch",
     backgroundColor: "#064E3B",
+    position: "relative",
+    overflow: "hidden",
   },
 
   splash: {
     ...StyleSheet.absoluteFill,
+    width: "100%",
     zIndex: 10,
     elevation: 10,
     backgroundColor: "#064E3B",
   },
-
   splashBackground: {
     flex: 1,
     width: "100%",
-    height: "100%",
+    minWidth: 0,
+    alignSelf: "stretch",
     backgroundColor: "#064E3B",
   },
 
@@ -629,6 +641,9 @@ const styles = StyleSheet.create({
 
   splashContent: {
     flex: 1,
+    width: "100%",
+    minWidth: 0,
+    alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 28,
