@@ -10,7 +10,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 type Props = {
   children: ReactNode;
-  onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
+  onScroll?: (
+    event: NativeSyntheticEvent<NativeScrollEvent>
+  ) => void;
   onViewportLayout?: (height: number) => void;
 };
 
@@ -33,6 +35,7 @@ export function AppScreen({
         onLayout={(event) =>
           onViewportLayout?.(event.nativeEvent.layout.height)
         }
+        keyboardShouldPersistTaps="handled"
       >
         <View style={styles.inner}>{children}</View>
       </ScrollView>
@@ -43,17 +46,29 @@ export function AppScreen({
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
+    width: "100%",
+    minWidth: 0,
+    alignSelf: "stretch",
     backgroundColor: "#F4F8F5",
   },
+
   scrollView: {
     flex: 1,
+    width: "100%",
+    minWidth: 0,
   },
+
   content: {
+    flexGrow: 1,
+    width: "100%",
     paddingHorizontal: 12,
     paddingTop: 10,
     paddingBottom: 24,
   },
+
   inner: {
+    width: "100%",
+    minWidth: 0,
     alignSelf: "stretch",
   },
 });

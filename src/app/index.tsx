@@ -136,12 +136,17 @@ export default function LandingScreen() {
     <View style={styles.root}>
       {/* Landing Page hiện tại */}
       <Animated.View
-        style={[StyleSheet.absoluteFill, { opacity: landingOpacity }]}
+        style={[
+          StyleSheet.absoluteFill,
+          styles.landingRoot,
+          { opacity: landingOpacity },
+        ]}
       >
         <ImageBackground
           source={require("../../assets/images/vwing-landing.jpg")}
           style={styles.background}
           imageStyle={styles.image}
+          resizeMode="cover"
         >
           <View style={styles.overlay} />
 
@@ -448,20 +453,26 @@ export default function LandingScreen() {
 }
 
 const styles = StyleSheet.create({
+  landingRoot: {
+    ...StyleSheet.absoluteFill,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#14532D",
+    overflow: "hidden",
+  },
   background: {
     flex: 1,
     width: "100%",
-    minWidth: 0,
-    alignSelf: "stretch",
+    height: "100%",
     backgroundColor: "#14532D",
   },
   image: {
-    borderRadius: 28,
+    borderRadius: 0,
   },
   overlay: {
     ...StyleSheet.absoluteFill,
     backgroundColor: "rgba(5, 30, 19, 0.36)",
-    borderRadius: 28,
+    borderRadius: 0,
   },
   container: {
     flex: 1,
@@ -590,8 +601,7 @@ const styles = StyleSheet.create({
   footer: {
     color: "#c0ffb0",
     fontSize: 12,
-    letterSpacing: 1,
-    marginBottom: 5,
+    marginBottom: 0,
     textAlign: "center",
     fontWeight: "800",
   },
@@ -612,8 +622,7 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     width: "100%",
-    minWidth: 0,
-    alignSelf: "stretch",
+    height: "100%",
     backgroundColor: "#064E3B",
     position: "relative",
     overflow: "hidden",

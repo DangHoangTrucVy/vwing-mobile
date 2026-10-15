@@ -42,20 +42,25 @@ export function AppHeader({ title = "VWING", onMenuPress }: Props) {
           <Text style={styles.subTitle}>Công nghệ nông nghiệp hàng không</Text>
         </View>
       </View>
-
-     
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   header: {
+    width: "100%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     paddingVertical: 14,
   },
-  brand: { flexDirection: "row", alignItems: "center", gap: 10 },
+
+  brand: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+
   logo: {
     width: 45,
     height: 45,
@@ -66,20 +71,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  logoText: { color: "#FFF", fontSize: 18, fontWeight: "900" },
-  title: { color: "#0F172A", fontSize: 18, fontWeight: "900" },
+
+  title: {
+    color: "#0F172A",
+    fontSize: 18,
+    fontWeight: "900",
+  },
+
   subTitle: {
     color: "#059669",
     fontSize: 10,
     letterSpacing: 0.5,
     fontWeight: "800",
-  },
-  menu: {
-    width: 42,
-    height: 42,
-    borderRadius: 14,
-    backgroundColor: "#FFF",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
