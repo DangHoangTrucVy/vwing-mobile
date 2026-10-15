@@ -460,13 +460,13 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(5, 30, 19, 0.36)",
     borderRadius: 28,
   },
-  container: {
-    flex: 1,
-    paddingHorizontal: 22,
-    paddingVertical: 12,
-    paddingBottom: 10,
-    justifyContent: "space-between",
-  },
+ container: {
+  flex: 1,
+  paddingHorizontal: 22,
+  paddingTop: 12,
+  paddingBottom: 16,
+  justifyContent: "space-between",
+},
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -503,10 +503,12 @@ const styles = StyleSheet.create({
   },
 
   content: {
-    marginTop: 150,
-    marginBottom: 154,
-    paddingHorizontal: 0,
-  },
+  flex: 1,
+  justifyContent: "center",
+  paddingHorizontal: 0,
+  marginTop: 0,
+  marginBottom: 0,
+},
 
   eyebrow: {
     color: "#D1FAE5",
@@ -560,21 +562,19 @@ const styles = StyleSheet.create({
     marginTop: 38,
   },
 
-  glassCard: {
-    backgroundColor: "rgba(22, 101, 52, 0.45)",
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.35)",
-    borderRadius: 24,
-    paddingVertical: 28,
-    paddingHorizontal: 20,
-
-    // Bóng đổ nhẹ
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.18,
-    shadowRadius: 16,
-    elevation: 8,
-  },
+ glassCard: {
+  backgroundColor: "rgba(22, 101, 52, 0.45)",
+  borderWidth: 1,
+  borderColor: "rgba(255, 255, 255, 0.35)",
+  borderRadius: 20,
+  paddingVertical: 20,
+  paddingHorizontal: 16,
+  shadowColor: "#000",
+  shadowOffset: { width: 0, height: 8 },
+  shadowOpacity: 0.18,
+  shadowRadius: 16,
+  elevation: 8,
+},
   ctaText: {
     color: "#065F46",
     fontSize: 12,
