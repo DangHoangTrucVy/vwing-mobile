@@ -358,8 +358,7 @@ export function TrialBooking({ onBook }: Props) {
 const styles = StyleSheet.create({
   section: {
     marginTop: 15,
-    backgroundColor: "#DDF4E4",
-    marginHorizontal: -12,
+    backgroundColor: "#DDF4E4",   
     marginBottom: -24,
     padding: 16,
   },

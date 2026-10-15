@@ -466,6 +466,7 @@ const styles = StyleSheet.create({
   section: {
     marginTop: 52,
     gap: 12,
+    paddingHorizontal: 12,
   },
 
   headingRow: {

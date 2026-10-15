@@ -279,6 +279,7 @@ const styles = StyleSheet.create({
   section: {
     marginTop: 30,
     paddingTop: 2,
+    paddingHorizontal: 12,
   },
 
   // Top decorative line

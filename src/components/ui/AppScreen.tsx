@@ -10,22 +10,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 type Props = {
   children: ReactNode;
-  onScroll?: (
-    event: NativeSyntheticEvent<NativeScrollEvent>
-  ) => void;
+  onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
   onViewportLayout?: (height: number) => void;
 };
 
-export function AppScreen({
-  children,
-  onScroll,
-  onViewportLayout,
-}: Props) {
+export function AppScreen({ children, onScroll, onViewportLayout }: Props) {
   return (
-    <SafeAreaView
-      style={styles.safeArea}
-      edges={["top", "left", "right"]}
-    >
+    <SafeAreaView style={styles.safeArea} edges={["left", "right"]}>
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.content}
@@ -57,7 +48,6 @@ const styles = StyleSheet.create({
     width: "100%",
     minWidth: 0,
   },
-
   content: {
     flexGrow: 1,
     width: "100%",

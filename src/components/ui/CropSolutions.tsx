@@ -265,9 +265,10 @@ const styles = StyleSheet.create({
   section: {
     marginTop: 30,
     backgroundColor: "#27805D",
-    marginHorizontal: -12,
+    
     marginBottom: -24,
     padding: 16,
+   
   },
 
   kicker: {

@@ -325,7 +325,7 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    paddingBottom: 28,
+    paddingBottom: 0,
     
   },
 

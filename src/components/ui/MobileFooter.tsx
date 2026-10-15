@@ -119,15 +119,15 @@ export function MobileFooter({ onNavigate }: Props) {
 }
 
 const styles = StyleSheet.create({
-  footer: {
-    alignSelf: "stretch",
-    backgroundColor: "#0B4A37",
-
-    marginTop: 24,
-    padding: 16,
-    marginHorizontal: -12,
-    marginBottom: -24,
-  },
+ footer: {
+  alignSelf: "stretch",
+  backgroundColor: "#0B4A37",
+  marginTop: 24,
+  paddingHorizontal: 16,
+  paddingTop: 16,
+  paddingBottom: 16,
+  marginBottom: 0,
+},
 
   overline: {
     color: "#A7F3D0",

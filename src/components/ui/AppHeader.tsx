@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingVertical: 14,
+    paddingHorizontal: 12,
   },
 
   brand: {
