@@ -5,7 +5,7 @@ import { BookingForm } from "../../components/ui/BookingForm";
 
 export default function BookingScreen() {
   return (
-    <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
+    <SafeAreaView style={styles.safeArea} edges={["left", "right"]}>
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.container}

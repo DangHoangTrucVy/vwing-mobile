@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     justifyContent: "flex-end",
-    paddingHorizontal: 18,
+    paddingHorizontal: 25,
     paddingVertical: 20,
     gap: 9,
   },

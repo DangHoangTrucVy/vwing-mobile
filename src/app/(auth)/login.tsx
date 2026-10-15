@@ -241,14 +241,15 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     width: "100%",
-    paddingHorizontal: 24, 
+    paddingHorizontal: 24,
   },
 
   header: {
+    width: "100%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: 36,
+    paddingHorizontal: 12,
   },
 
   backButton: {
@@ -308,6 +309,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 8,
     marginBottom: 22,
+    marginTop: 18,
   },
 
   welcomeText: {

@@ -122,7 +122,7 @@ export default function NewsScreen() {
   });
 
   return (
-    <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
+    <SafeAreaView style={styles.safeArea} edges={["left", "right"]}>
       <AppHeader title="VWING" />
 
       <Animated.ScrollView
@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#f0fff2",
     flexGrow: 1,
-    paddingHorizontal: 16,
+    paddingHorizontal: 12,
     paddingBottom: 2,
   },
 
